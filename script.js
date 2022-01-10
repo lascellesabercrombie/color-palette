@@ -3,8 +3,10 @@ let unitOne = document.getElementById("color-unit-1");
 let unitTwo = document.getElementById("color-unit-2");
 let unitThree = document.getElementById("color-unit-3");
 let button = document.querySelector("button")
-
-
+let answer = document.querySelector(".answer")
+let color1JSON = document.getElementById("color1JSON")
+let color2JSON = document.getElementById("color2JSON")
+let color3JSON = document.getElementById("color3JSON")
 
 
 function colorGenerator() {
@@ -20,20 +22,17 @@ function changeColor(colorBlock){
 colorBlock.style.backgroundColor = colorGenerator();
 }
 
-// function colorChanger() {
-//   changeColor(unitOne);
-//   changeColor(unitTwo);
-//   changeColor(unitThree);
-// }
-
 function changeUnitOneColor() {
   changeColor(unitOne);
+  color1JSON.innerText = `{"color1":"${unitOne.style.backgroundColor}"},`
 }
 function changeUnitTwoColor() {
   changeColor(unitTwo);
+  color2JSON.innerText = `{"color1":"${unitTwo.style.backgroundColor}"},`
 }
 function changeUnitThreeColor() {
   changeColor(unitThree);
+  color3JSON.innerText = `{"color1":"${unitThree.style.backgroundColor}"},`
 }
 
 unitOne.addEventListener('click', changeUnitOneColor);
@@ -45,8 +44,5 @@ button.addEventListener('click', function(){
   changeUnitThreeColor();
 })
 
-/*
-function should take background color of unit,
-access it in the form HSL, 
-then randomise those three numbers
-*/
+
+
