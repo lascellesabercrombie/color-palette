@@ -4,9 +4,9 @@ let unitTwo = document.getElementById("color-unit-2");
 let unitThree = document.getElementById("color-unit-3");
 let button = document.querySelector("button")
 let answer = document.querySelector(".answer")
-let color1JSON = document.getElementById("color1JSON")
-let color2JSON = document.getElementById("color2JSON")
-let color3JSON = document.getElementById("color3JSON")
+let color1JSON = document.getElementById("color1-JSON")
+let color2JSON = document.getElementById("color2-JSON")
+let color3JSON = document.getElementById("color3-JSON")
 
 
 function colorGenerator() {
